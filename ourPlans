@@ -1,0 +1,12 @@
+
+
+plans
+from 
+	12,12
+to
+	12,19
+
+	1, general model for the 50 DataBase
+	2, analysis of the Feature Selection
+	3, fewer features for regression and classification
+	4, try the sequency model LSTM
