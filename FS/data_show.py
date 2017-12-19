@@ -2,17 +2,11 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import pylab as pl
 import os
+import DataStream as DS
 
-def file_name(file_dir):
-    names = []
-    for root, dirs, files in os.walk(file_dir):
-        #print(root) #当前目录路径
-        #print(dirs) #当前路径下所有子目录
-
-        names = files#当前路径下所有非目录子文件
-
-    return names
+PATH = '../FS/csv/'
 
 # 读入文件，并打印出图片
 def file_csv(name):
@@ -34,31 +28,55 @@ def file_csv(name):
 
     plt.show()
 
-def data_check(name):
-    print(name)
-    df_data = pd.read_csv('csv/' + name)
-    arr_data = df_data.values
 
-    print(arr_data[0][0])
-    for i in range(arr_data.shape[0]):
-        if i==0:
-            continue
-        temp = arr_data[i][0]-arr_data[i-1][0]
-        if temp != 1:
-            return arr_data[i][0]
 
 
 
 if __name__ == '__main__':
     print("Here are the result:")
-    names = file_name('csv/')
 
-    #for name in names:
-        #file_csv(name)
+    #FileNames = DS.fetch_FileNames(PATH)
+    #name = FileNames[0]
+    #data, LoadScore, PerfScore, snapId, featureName = DS.DataPrepared(name)
 
-    file_csv(names[0])
+    df_DBID = pd.read_csv(PATH + 'DBID(1002089510)_INSTID(1).csv')
+    # arr_data = df_DBID.values
+    # LoadScore = arr_data[:, -4]
+    # print(type(LoadScore))
+    # DS.DataNormalized(LoadScore)
+    # print(LoadScore)
 
 
+    y1 = df_DBID['2080031'].values
+    y2 = df_DBID['LoadScore'].values
+    x =  df_DBID['SnapId'].values
+
+    print(type(y2))
+    #DS.DataNULLProcess(x1)
+    DS.DataNormalized(y1)
+    #DS.DataNULLProcess(x2)
+    DS.DataNormalized(y2)
+
+    print(y1)
+    print(y2)
+
+    print(x.shape)
+    print(y1.shape)
+    print(y2.shape)
+    y = np.array([11,12,13,14], dtype=np.float)
+    print(y.shape)
+    DS.DataNormalized(y)
+    print(y.shape)
+    print(y)
+
+    plot1, = pl.plot(x, y1, 'r')
+    plot2, = pl.plot(x, y2, 'g')
+
+    pl.xlabel('DBID(1002089510)_INSTID(1).csv: snapId')
+    pl.ylabel('normalized value')
+
+    pl.legend([plot1, plot2], ('2080031', 'LoadScore'))
+    pl.show()
 
 
 

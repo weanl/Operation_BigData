@@ -90,6 +90,7 @@ def DataNULLProcess(M):
 
 # 对一维矩阵进行归一化处理 到(0,1)区间上
 def DataNormalized(arr):
+    arr.dtype = 'float'
     Max = arr.max()
     Min = arr.min()
     L = Max - Min
