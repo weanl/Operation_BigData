@@ -39,7 +39,11 @@ if __name__ == '__main__':
     #name = FileNames[0]
     #data, LoadScore, PerfScore, snapId, featureName = DS.DataPrepared(name)
 
-    df_DBID = pd.read_csv(PATH + 'DBID(1002089510)_INSTID(1).csv')
+
+    FEATRUE = '2080031'
+    SCORE_NAME = 'LoadScore'
+    fileName = 'DBID(2031853600)_INSTID(1).csv'
+    df_DBID = pd.read_csv(PATH + fileName)
     # arr_data = df_DBID.values
     # LoadScore = arr_data[:, -4]
     # print(type(LoadScore))
@@ -47,8 +51,9 @@ if __name__ == '__main__':
     # print(LoadScore)
 
 
-    y1 = df_DBID['2080031'].values
-    y2 = df_DBID['LoadScore'].values
+
+    y1 = df_DBID[FEATRUE].values
+    y2 = df_DBID[SCORE_NAME].values
     x =  df_DBID['SnapId'].values
 
     print(type(y2))
@@ -72,10 +77,10 @@ if __name__ == '__main__':
     plot1, = pl.plot(x, y1, 'r')
     plot2, = pl.plot(x, y2, 'g')
 
-    pl.xlabel('DBID(1002089510)_INSTID(1).csv: snapId')
+    pl.xlabel(fileName + ':' + 'snapId')
     pl.ylabel('normalized value')
 
-    pl.legend([plot1, plot2], ('2080031', 'LoadScore'))
+    pl.legend([plot1, plot2], (FEATRUE, SCORE_NAME))
     pl.show()
 
 
