@@ -10,3 +10,12 @@ to
 	2, analysis of the Feature Selection
 	3, fewer features for regression and classification
 	4, try the sequency model LSTM
+
+The Report Struct:
+	Part 1:
+		 different distribution of features in corresponding DBIDs
+
+		 Give the picture of the specific LoadScore and PerfScore
+		 Then, by the FS-method, MIC, we can compare the Score with the chosen features. 
+		 	LoadScore: DBID = 2031853600 MIC choose "2080031" as the most import one.
+		 	PerfScore: DBID = 1227435885 (1) choose "2080049" as the most import one.
