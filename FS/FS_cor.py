@@ -13,6 +13,8 @@ from scipy.stats import pearsonr
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+from statsmodels.tsa.stattools import acf, pacf
+
 
 def file_name(file_dir):
     names = []
