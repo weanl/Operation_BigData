@@ -31,10 +31,13 @@ file_sets = [
         ]
 
 PATH = '../FS/csv/'
+PATH_save = '../FS/csv_Preprocess1.0/'
 
-samples_df = pd.read_csv(PATH + file_sets[0] + '.csv')
-print(samples_df)
+for i in range(len(file_sets)):
+	samples_df = pd.read_csv(PATH + file_sets[i] + '.csv')
 
-samples_df.fillna(0)
-print(samples_df)
+	samples_df = samples_df.fillna(samples_df.mean())
+	samples_df = samples_df.fillna(0)
+
+	samples_df.to_csv(PATH_save + file_sets[i] + '.csv')
 
