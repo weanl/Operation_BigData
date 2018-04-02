@@ -1,0 +1,47 @@
+
+
+
+import pandas as pd
+import numpy as np
+
+file_sets = [
+        'DBID(1002089510)_INSTID(1)','DBID(2897570545)_INSTID(1)',
+        'DBID(1227435885)_INSTID(1)','DBID(2949199900)_INSTID(1)',
+        'DBID(1227435885)_INSTID(2)','DBID(3065831173)_INSTID(1)',
+        'DBID(1254139675)_INSTID(1)','DBID(3111200895)_INSTID(1)',
+        'DBID(1384807946)_INSTID(1)','DBID(3172835364)_INSTID(1)',
+        'DBID(1624869053)_INSTID(1)','DBID(3204204681)_INSTID(1)',
+        'DBID(1636599671)_INSTID(1)','DBID(3482311182)_INSTID(1)',
+        'DBID(1636599671)_INSTID(2)','DBID(349165204)_INSTID(1)',
+        'DBID(172908691)_INSTID(1)','DBID(3671658776)_INSTID(1)',
+        'DBID(1855232979)_INSTID(1)','DBID(3671658776)_INSTID(2)',
+        'DBID(1982696497)_INSTID(1)','DBID(3775482706)_INSTID(1)',
+        'DBID(2031853600)_INSTID(1)','DBID(3775482706)_INSTID(2)',
+        'DBID(2052255707)_INSTID(1)','DBID(4213264717)_INSTID(1)',
+        'DBID(2238741707)_INSTID(1)','DBID(4215505906)_INSTID(1)',
+        'DBID(2238741707)_INSTID(2)','DBID(4225426100)_INSTID(1)',
+        'DBID(2328880794)_INSTID(1)','DBID(4291669003)_INSTID(1)',
+        'DBID(2413621137)_INSTID(1)','DBID(4291669003)_INSTID(2)',
+        'DBID(2612437783)_INSTID(1)','DBID(447326245)_INSTID(1)',
+        'DBID(2644427317)_INSTID(1)','DBID(468957624)_INSTID(1)',
+        'DBID(2707003786)_INSTID(1)','DBID(505574722)_INSTID(1)',
+        'DBID(2762567375)_INSTID(1)','DBID(522516877)_INSTID(1)',
+        'DBID(2768077198)_INSTID(1)','DBID(770699067)_INSTID(1)',
+        'DBID(2778659381)_INSTID(1)','DBID(929227073)_INSTID(1)',
+        'DBID(2778659381)_INSTID(2)','DBID(942093433)_INSTID(1)',
+        'DBID(2802676787)_INSTID(1)','DBID(998852395)_INSTID(1)'
+        ]
+
+PATH = '../FS/csv_Preprocess1.0/'
+PATH_save = '../FS/csv_Preprocess2.0/'
+
+if __name__ == "__main__":
+
+    for i in range(len(file_sets)):
+        df = pd.read_csv(PATH + file_sets[i] + '.csv')
+        if i == 0:
+            df_all = df
+        else:
+            df_all = pd.concat([df_all, df], ignore_index=True)
+
+    df_all.to_csv(PATH_save + 'all_data' + '.csv')
