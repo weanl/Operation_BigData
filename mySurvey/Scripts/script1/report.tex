@@ -1,0 +1,154 @@
+\documentclass[a4paper,UTF8]{article}
+\usepackage{ctex}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage[thmmarks, amsmath, thref]{ntheorem}
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+\newtheorem*{prove}{Proof}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Procedure:}}
+\renewcommand\refname{参考文献}
+
+%--
+
+%--
+\begin{document}
+\title{实验2. 隐马尔科夫模型实践}
+\author{MF1733014，高少华，\url{cuggsh@163.com}}
+\maketitle
+
+\section*{综述}
+	隐马尔科夫模型(Hidden Markov Model, HMM)是一种有向图模型，它用来描述一个含有隐含未知参数
+	的马尔可夫过程，在语音识别，自然语言处理等领域有广泛的应用。以下对该模型的简要说明，参考自文献
+	\cite{jqxx}的相关章节。\par
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[scale=0.40]{hmm.png}
+		\caption{隐马尔可夫模型的图结构}
+	\end{figure}
+	如图1所示，在隐马尔可夫模型中，存在两组变量，其中$\left\{y_{1},y_{2},...,y_{n}\right\}$
+	为状态变量，通常是隐藏的，不可被观测的，也称作隐变量。隐变量的取值通常是有N个可能取值的离散空间
+	$S=\left\{s_{1},s_{2},...,s_{N}\right\}$。另一组$\left\{x_{1},x_{2},...,x_{n}\right\}$
+	为观测变量，可被直接观测到,其取值可以是离散的，也可以是连续的，这里假设其取值也是一个离散空间
+	$O=\left\{o_{1},o_{2},...,o_{M}\right\}$。在任意时刻，观测变量的取值仅依赖于隐变量，即
+	$x_{t}$由$y_{t}$确定，与其他的隐变量及观测变量无关。同时，${t}$时刻的隐变量$y_{t}$
+	仅依赖于${t-1}$时刻的隐变量$y_{t-1}$，即系统下一时刻的状态只与当前时刻的状态有关。则可得所
+	有变量的联合概率分布为
+	$$P(x_{1},y_{1},...,x_{n},y_{n})=P(y_{1})P(x_{1}|y_{1})\prod_{i=2}^{n}P(y_{i}|y_{i-1})P(x_{i}|y_{i}) \eqno{(1)}$$
+	确定一个一个隐马尔可夫模型还需以下三组参数：
+	\begin{itemize}
+		\item 状态转移矩阵：模型在各个状态间转换的概率，记作$A=[a_{ij}]_{N×N}$,其中$a_{ij}$表示
+		在任意时刻从状态$s_{i}$转换到状态$s_{j}$的概率。
+		\item 发射矩阵：模型在当前状态获得各个观测值的概率，记作$B=[b_{ij}]_{N×M}$,其中$b_{ij}$表示
+		在任意时刻从状态$s_{i}$获取观测值$o_{j}$的概率。
+		\item 初始分布：模型在初始时刻各状态出现的概率，记作$\pi=(\pi_{1},\pi_{2},...,\pi_{N})$,
+		其中$\pi_{i}$表示模型在初始时刻，状态为$s_{i}$的概率。
+	\end{itemize} \par
+	隐马尔可夫模型有三个基本问题：
+	\begin{itemize}
+		\item 已知模型参数$\lambda=[A,B,\pi]$和某一特定的观测序列$\left\{x_{1},x_{2},...,x_{n}\right\}$，
+		求最后时刻各个隐状态的概率分布，推测最有可能的观测值$x_{n+1}$。
+		\item 已知模型参数$\lambda=[A,B,\pi]$和某一特定的观测序列，求中间时刻各个隐状态的
+		概率分布，换言之，就是根据观测序列推测隐藏的模型状态。通常使用 viterbi 算法解决，实验一将实现该算法。
+		\item 已知某一特定的观测序列，调整模型参数$\lambda=[A,B,\pi]$，使得该序列出现的概率最大。即，
+		训练模型使其能最好地描述观测数据。通常可以使用极大似然法或是 Baum-Welch 算法，来估计模型参数，
+		在实验二、三将实现 Baum-Welch 算法的关键步骤。
+	\end{itemize}
+
+
+\section*{实验一. viterbi 算法}
+	viterbi 算法是一种动态规划算法，它用于寻找最有可能产生观测序列的维特比路径——隐状态序列，
+	特别是在马尔可夫信息源上下文和隐马尔可夫模型中。该算法的伪代码描述如算法1所示\cite{wiki:Viterbi}，
+	其中输入及输出参数的说明见综述部分，$delta[i,j]$保存在$i$时刻获取到观测状态$s_{j}$的概率的最大值，
+	$phi[i,j]$用于记录路径。
+
+	\begin{algorithm}
+		\caption{viterbi 算法}
+		\begin{algorithmic}[1]
+			\REQUIRE $O,S,\pi,X,A,B$
+			\ENSURE $Y$
+			\FOR{each state $s_{i}$}
+			\STATE $delta[i,1] \gets \pi\cdot B_{ix_{1}}$
+			\STATE $phi[i,1] \gets 0$
+			\ENDFOR
+			\FOR{$i \gets 2,3,...,T$}
+			\FOR{each state $s_{j}$}
+			\STATE $delta[j,i] \gets \max \limits_{k}(delta[k,i-1]\cdot A_{kj} \cdot B{jx_{i}})$
+			\STATE $phi[j,i] \gets arg\max \limits_{k}(delta[k,i-1]\cdot A_{kj} \cdot B{jx_{i}})$
+			\ENDFOR
+			\ENDFOR
+			\STATE $Y[T] \gets arg\max \limits_{k}(delta[k,T])$
+			\FOR{$i \gets T-1,...,2$}
+			\STATE $Y[i] \gets phi[Y[i+1],i+1]$
+			\ENDFOR
+			\RETURN $Y$
+		\end{algorithmic}
+	\end{algorithm}
+
+
+\section*{实验二. Forward 算法}
+	前向概率\cite{tjffx}：给定隐马尔可夫模型参数$\lambda = [A, B, \pi]$，到$t$时刻为止，
+	观测序列为$o_{1},o_{2},...,o_{t}$且状态为$s_{i}$的概率，记作：
+	$$ \alpha_{t}(i) = P(o_{1},o_{2},...,o_{t},y_{t}=s_{i} | \lambda)$$
+	可以递归求得前向概率$\alpha_{t}(i)$，Forward 算法描述如下：
+	\begin{algorithm}
+		\caption{Forward 算法}
+		\begin{algorithmic}[1]
+			\REQUIRE $O,\lambda=[A, B, \pi]$
+			\ENSURE $\alpha$
+			\FOR{each state $b_{i}$}
+			\STATE $\alpha_{1}(i) \gets \pi_{i}b_{i}(o_{1})$
+			\ENDFOR
+			\FOR{$t \gets 2,3,...,T$}
+			\FOR{each state $b_{i}$}
+			\STATE $ \alpha_{t}(i) = [\sum_{j=1}^{N}\alpha_{t-1}(j)a_{ji}]b_{i}(o_{t})$
+			\ENDFOR
+			\ENDFOR
+			\RETURN $\alpha$
+		\end{algorithmic}
+	\end{algorithm}
+
+\section*{实验三. Backward 算法}
+	\begin{algorithm}
+		\caption{Backward 算法}
+		\begin{algorithmic}[1]
+			\REQUIRE $O,\lambda=[A, B, \pi]$
+			\ENSURE $\beta$
+			\FOR{each state $b_{i}$}
+			\STATE $\beta_{T}(i) \gets 1$
+			\ENDFOR
+			\FOR{$t \gets T-1,T-2,...,1$}
+			\FOR{each state $b_{i}$}
+			\STATE $ \beta_{t}(i) = [\sum_{j=1}^{N}\beta_{t+1}(j)a_{ji}]b_{i}(o_{t+1})$
+			\ENDFOR
+			\ENDFOR
+			\RETURN $\beta$
+		\end{algorithmic}
+	\end{algorithm}
+	后向概率\cite{tjffx}：给定隐马尔可夫模型参数$\lambda = [A, B, \pi]$，在$t$时刻状态为$s_{i}$的条件下，
+	从$t+1$时刻到$T$的部分观测序列为$o_{t+1},o_{t+2},...,o_{T}$的概率，记作：
+	$$\beta_{t}(i)=P(o_{t+1},o_{t+2},...,o_{T}|y_{t}=s_{i},\lambda)$$
+	可以递归求得前向概率$\beta_{t}(i)$，Backward 算法描述如算法3所示。
+
+\section*{结果}
+	程序运行结果如图2所示。
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[scale=0.55]{result.png}
+		\caption{运行结果}
+	\end{figure}
+
+\bibliographystyle{plain}
+\bibliography{report}
+
+\end{document}

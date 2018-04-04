@@ -1,0 +1,23 @@
+﻿日志错误分类
+1、关键字
+   Cannot parse POST parameters of request   （POST 方法获取session失败）
+	影响主机性能，降低应用体验
+2、关键字
+	java.net.SocketTimeoutException: Read timed out  （读取文件超时）
+	影响主机性能，降低应用体验
+3、关键字
+	socket timeout  （socket读取超时）
+	影响主机性能，降低应用体验
+4、关键字
+	StuckThreadMaxTime （线程处理超时）
+	线程阻塞，严重会引起挂起现象
+5、关键字
+	Response already committed（请求重复提交）
+	jsp编译有问题。影响性能。
+6、关键字
+	java.lang.NullPointerException（空指针异常）
+7、关键字
+	
+8、关键字
+9、关键字
+10、关键字

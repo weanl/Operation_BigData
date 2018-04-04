@@ -78,16 +78,16 @@ def sprt_run():
             data_len, MSE_train, MSE_pred, R2 = runlinearRegression('../FS/csv_Preprocess1.0/', DBID)
             if i == 0:
                 sum_len = data_len
-                sum_MSE_train = MSE_train * data_len
-                sum_MSE_pred = MSE_pred * data_len
+                sum_MSE_train = MSE_train * data_len * 0.8
+                sum_MSE_pred = MSE_pred * data_len * 0.2
             else:
                 sum_len = sum_len + data_len
-                sum_MSE_train = sum_MSE_train + MSE_train * data_len
-                sum_MSE_pred = sum_MSE_pred + MSE_pred * data_len
+                sum_MSE_train = sum_MSE_train + MSE_train * data_len * 0.8
+                sum_MSE_pred = sum_MSE_pred + MSE_pred * data_len * 0.2
 
         print("total samples: ", sum_len)
-        print("avrg_MSE_train: ", sum_MSE_train/sum_len)
-        print("avrg_MSE_pred: ", sum_MSE_pred/sum_len)
+        print("avrg_MSE_train: ", sum_MSE_train/(sum_len * 0.8))
+        print("avrg_MSE_pred: ", sum_MSE_pred/(sum_len * 0.2))
 
 def all_run():
     DBID = 'all_data'
