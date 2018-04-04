@@ -5,3 +5,12 @@
 
 # 三类特征选择方法的对比
 	与较为简单的variable ranking这样的过滤式方法相比较，经过精心设计的包裹式和嵌入式方法在多数应用中能显著地提高预测器的性能。
+
+	individual 和 subset 方法的比较
+	filter 也有子集选择的方法
+	(Langley, 1994) wrapper tends to be more computationally expensive than filter. 所以当特征数目很大时，建议采用filter方法
+
+	Combination 的方法
+
+
+# 数据预处理
