@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1523165379 "script1.tex" "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1523165380
+["pdflatex"] 1523198203 "script1.tex" "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1523198204
   "/dev/null" 1523160152 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1521775747 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1523165380 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1523198204 8 a94a2480d3289e625eea47cd1b285758 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -78,10 +78,10 @@
   "/usr/share/texmf/tex/latex/tipa/t3enc.def" 1414244106 26483 c461a68c34040cb0d96c43e86c012a6d ""
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1521775802 3471778 067fc8e63ee8c16fc579758e7d014856 ""
-  "script1.aux" 1523165380 8 a94a2480d3289e625eea47cd1b285758 ""
-  "script1.tex" 1523165374 1470 dda784eddf3014f99644ea906386ebde ""
+  "script1.aux" 1523198204 8 a94a2480d3289e625eea47cd1b285758 ""
+  "script1.tex" 1523198196 3586 a7b394a53beef25dd72f008d79d0941b ""
   (generated)
+  "script1.log"
   "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
   "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
   "script1.aux"
-  "script1.log"

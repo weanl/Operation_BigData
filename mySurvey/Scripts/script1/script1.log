@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  8 APR 2018 13:29
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  8 APR 2018 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1219,14 +1219,14 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 .................................................
  [1
 
-] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
+] [2] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
 Here is how much of TeX's memory you used:
- 19995 strings out of 493638
- 411222 string characters out of 6146796
- 384133 words of memory out of 5000000
- 23229 multiletter control sequences out of 15000+600000
+ 20022 strings out of 493638
+ 413035 string characters out of 6146796
+ 391133 words of memory out of 5000000
+ 23256 multiletter control sequences out of 15000+600000
  6666 words of font info for 47 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,7n,77p,10449b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (1 page).
+Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (2 pages).
