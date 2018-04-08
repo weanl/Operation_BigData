@@ -2,6 +2,21 @@
 #coding:utf-8
 
 
+# 特征选择的技术应用
+	概括为：
+	1. 采集过程可能引入数据噪声，影响后续的数据处理；同样与学习任务无关的特征也可以认为是噪声，影响预测器的精度；
+	特征选择可以过滤掉一些无关的特征，提升预测器的精度。
+	2. 稍微精致一点的（非pair-wise）特征选择方法不仅可以过滤无关特征，还可以剔除一些冗余特征；一定程度上应对 curse of dimensionality
+		a fast correlation-based filter method solution
+	3. 可以实现特征重要性的评估：一些带有指标（如相关性，权值）的方法，可以在选出的特征子集中按指标进行特征的重要性排序。
+
+# 研究趋势
+	能够处理 各种结构以及 非结构化的数据
+	降低算法的复杂度，能够有效地处理高维的数据
+
+# 特征选择 在 回归和分类 任务中应用的区别 ？？
+	应该考虑不同的方法
+
 
 # 三类特征选择方法的对比
 	与较为简单的variable ranking这样的过滤式方法相比较，经过精心设计的包裹式和嵌入式方法在多数应用中能显著地提高预测器的性能。
@@ -15,3 +30,47 @@
 
 
 # 数据预处理
+	the quality of data is about whether data contains missing values or noisy data.
+	有时候需要 数据离散化
+
+# filter correlation
+	cor(xi,y) for irrelavant , cor(xi,xj) for redundant 分类任务可以 计算线性相关系数吗？
+		有区别吗：linear correlation coefficient // Pearson correlation coefficient 是一个东西
+	信息增益方法 information gain measurement 计算概率分布？？
+	考虑上述方法在 sklearn 中具体是如何实现的**
+
+# Wrapper 
+	search 策略，前向、后向、
+
+
+# Embedded
+	lasso with L1 penalty, --> Bolasso
+	elastic net regularization, which combines L1 penalty of lasso with the L2 penalty of ridge regression
+	FeaLect
+	Recursive Feature Elimination (SVM-RFE) sklearn.feature_selection.RFE
+
+	** decision tree based methods ( ... (bagged and boosted ?))
+
+
+2018年4月8日
+###############################  摘要  #########################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
