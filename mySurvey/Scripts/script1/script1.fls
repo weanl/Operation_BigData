@@ -1,10 +1,10 @@
-PWD /home/weanl/Tex/mySurvey/Scripts/script1
+PWD /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
-INPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.tex
-OUTPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.log
+INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.tex
+OUTPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -125,9 +125,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-INPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.aux
-INPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.aux
-OUTPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.aux
+INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
+INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
+OUTPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
 INPUT /usr/share/texmf/tex/latex/tipa/t3cmr.fd
 INPUT /usr/share/texmf/tex/latex/tipa/t3cmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -141,4 +141,4 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
-INPUT /home/weanl/Tex/mySurvey/Scripts/script1/script1.aux
+INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux

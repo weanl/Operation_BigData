@@ -11,6 +11,16 @@
 
 \section*{1. 介绍}
   FS在ML中能解决那些问题？已经解决得怎么样了？还有那些问题？feature construction = FS + FE
+  特征选择(Feature, Variable and Attribution Selection)，是机器学习中feature construction的重要组成部分。在筛选
+  原始数据，构造有用的特征集合方面，特征选择不同于特征提取(Feature Extraction)：后者会通过线性或非线性的方式从原始数据中
+  构造出全新的特征，具有特征学习和表示学习的能力["Representation Learning: A Review and New Perspectives"]；特征
+  选择通过设计一些简单高效或者精致巧妙的方法，实现从原始特征集合中选出最优的特征子集，能够保持特征对应的原始物理意义。
+  所谓最优特征子集，理论上定义为没有信息丢失的最小特征子集，以Markov blanket的形式给出[D. Koller, Toward optimal feature selection][C.Aliferis, Local
+  causal and markov blanket induction for causal discovery and feature selection]；实际中理论的ground-truth
+  很难找，所以经验上一般我们用预测器性能（如分类器的精度）来评估特征子集的选择结果。[Blum and langley,1997,Kohavi and
+  John,1997]等在1997年提出了特征选择方面课题研究，当时大多数场景下特征维数不超过40，主要解决的是特征之间的相关性问题。后续
+  研究中中涉及的特征维数
+  几年在染色体序列分析
 
 
 

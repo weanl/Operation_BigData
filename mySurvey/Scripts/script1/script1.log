@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  3 APR 2018 21:46
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  8 APR 2018 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **script1.tex
-(/home/weanl/Tex/mySurvey/Scripts/script1/script1.tex
+(/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -1069,7 +1069,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/home/weanl/Tex/mySurvey/Scripts/script1/script1.aux)
+) (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux)
 \openout1 = `script1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1219,14 +1219,14 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 .................................................
  [1
 
-] (/home/weanl/Tex/mySurvey/Scripts/script1/script1.aux) ) 
+] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
 Here is how much of TeX's memory you used:
- 19941 strings out of 493638
- 407429 string characters out of 6146796
- 380133 words of memory out of 5000000
- 23175 multiletter control sequences out of 15000+600000
+ 19995 strings out of 493638
+ 411222 string characters out of 6146796
+ 384133 words of memory out of 5000000
+ 23229 multiletter control sequences out of 15000+600000
  6666 words of font info for 47 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,7n,77p,10449b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/weanl/Tex/mySurvey/Scripts/script1/script1.pdf (1 page).
+Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (1 page).
