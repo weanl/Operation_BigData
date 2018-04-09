@@ -125,6 +125,16 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
 INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
 OUTPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux
@@ -141,4 +151,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux

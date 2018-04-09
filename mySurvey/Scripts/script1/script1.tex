@@ -3,6 +3,12 @@
 \usepackage[margin=1.25in]{geometry}
 
 \usepackage{url}
+\usepackage{enumerate}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
 
 \begin{document}
 \title{综述. 特征选择方法}
@@ -42,7 +48,7 @@
 
   接下来的部分，我们会分别介绍特征选择典型的三种分类：过滤式(filter)、包裹式(wrapper)和嵌入式(embbedding)。
 
-  过滤式：（线性相关系数、互信息系数、relief and reliefF、combination）
+  过滤式：（线性相关系数、互信息系数、relief and relief-F、combination）
 
   包裹式：（一般子集搜索策略）
 
@@ -51,6 +57,99 @@
 
 
 \section*{2. 过滤式与包裹式}
+  特征选择的形式化定义：
+  首先将样本空间定义为一个$ N $维的随机变量$ X = (X_{0}, X_{1}, ... , X_{N-1})$，其服从一定的概率分布，通常认为样本实例（数据）都是该概率分布采样所得；
+  特征全集$ S = \{X_{0}, X_{1}, ... , X_{N-1}\} $，特征选择考虑的是如何有效地除去无关和冗余的特征，筛选得到”最优”特征子集$ S^{*} \subset S $[?]。
+  显然，暴力地遍历$ S $所有子集会遇到组合爆炸，是不可行的。实际设计中，常采用如下思路进行搜索：
+
+  \begin{itemize}
+
+    \item 产生初始候选特征子集，进行下一步；
+    \item 评价候选特征子集，如果达到终止条件终止搜索，否则进行下一步；
+    \item 基于上一步评价结果，生成新候选特征子集，返回上一步。
+
+  \end{itemize}
+  由上，特征选择方法可以依据新候选特征子集的方法(Search Strategies)进行分类，通常有Complete、Sequential和Random等策略，但这种分类方法不是主流的
+  划分方法。主流的分类方法是依据候选子集的评价方法(Evaluation Criteria)对特征选择方法进行分类，简单地说，用独立于学习器的方法进行评价的称为过滤式方法，
+  用学习器的性能进行评价的称为包裹式方法，本章节主要介绍这两种很早被提出的方法。下一章节我们还会介绍后续巧妙独特的嵌入式方法，不同于前两种前两类方法，
+  嵌入式方法将特征选择嵌入到学习器的训练过程中。
+
+
+\subsection*{2.1 过滤式方法}
+  理论定义上：
+
+  \begin{algorithm}
+    \caption{Filter Algorithm}
+    \begin{algorithmic}
+      \REQUIRE $ D(F_{0}, F_{1},..., F_{N-1})$
+
+               $ S_{0}$
+      \ENSURE $ S_{best} $
+
+    \end{algorithmic}
+
+
+
+
+  \end{algorithm}
+
+  算法中$ eval(S_{0}, D, M)$说明过滤式采用独立的评价方法，下面介绍几种常见的方法。
+
+\subsubsection*{2.1.1 ********}
+  线性相关系数、信息熵方法及MIC、relief-F
+
+  在统计学中，常用线性相关系数(Pearson correlation coefficient)衡量两个随机变量间线性相关性。若定义两个随机变量$ A, B $,则可有$M$个采样
+  $ A: a_{0},...,a_{M-1}; B: b_{0},...,b_{M-1}$计算出两随机变量间的线性相关系数（的估计值）：
+  $$  r_{AB} = \frac{\sum_{i=0}^{M-1}(a_{i}-\overline{a})(b_{i}-\overline{b})}{\sqrt{\sum_{i=0}^{M-1}(a_{i}-\overline{a})^2}\sqrt{\sum_{i=0}^{M-1}(b_{i}-\overline{b})^2}}$$
+
+  $ r_{AB} $在$ [-1,1]$上取值，一般做如下判断：如果$ \mid{r_{AB}}\mid<0.2$,认为A和B显著地没有线性相关性；如果$ \mid{r_{AB}}\mid>0.8$,认为A和B显著地有线性相关性。
+  在特征选择中一般做如下应用：令$ A=X_{i},i=0,1,...,N-1, B=Y$，其中$Y$为监督学习下给出的数据标签对应的随机变量称为标签变量，满足现实的映射关系$Y=f(X)$；然后计算$ r_{AB} $，
+  即计算$N$个特征和标签变量的线性相关系数，从而剔除一些$\mid{r_{AB}}\mid$过小的特征。该方法在线性假设下能过滤一些无关特征，计算简单应用广泛。
+  这里需要注意的是该方法由如下应用前提：$A,B$为连续的随机变量；$A,B$应通过正太分布检验，即大致呈正太分布。
+
+
+
+\subsubsection*{2.1.2 组合方法}
+
+[2003, Feature Selection for High-Dimensional Data: A Fast Correlation-Based Filter Solution] FCBC Algorithm
+
+
+
+\subsection*{2.2 包裹式方法}
+
+\begin{algorithm}
+  \caption{Wrapper Algorithm}
+  \begin{algorithmic}
+    \REQUIRE $ D(F_{0}, F_{1},..., F_{N-1})$
+
+             $ S_{0}$
+    \ENSURE $ S_{best} $
+
+  \end{algorithmic}
+
+
+
+
+\end{algorithm}
+
+包裹式方法用学习器的性能对候选特征子集进行评价，好处在于
+
+
+
+\section*{3. 嵌入式}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
