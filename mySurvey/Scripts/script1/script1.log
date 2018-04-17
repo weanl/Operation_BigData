@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  10 APR 2018 17:08
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  11 APR 2018 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1263,14 +1263,14 @@ Overfull \hbox (41.5297pt too wide) in paragraph at lines 112--117
 \EU1/FandolSong-Regular(0)/m/n/10.53937 其 中 $\OML/cmm/m/it/10.53937 IG\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 )$ \EU1/FandolSong-Regular(0)/m/n/10.53937 为 信 息 增 益，|  对 于 $\OML/cmm/m/it/10.53937 A; B$ \EU1/FandolSong-Regular(0)/m/n/10.53937 是 对 称 的；| $\OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) = \OMS/cmsy/m/n/10.53937 ^^@ [][] \OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 log[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 ))$
  []
 
-[3] [4] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
+[3] [4] [5] [6] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
 Here is how much of TeX's memory you used:
- 20345 strings out of 493638
- 417595 string characters out of 6146796
+ 20355 strings out of 493638
+ 418265 string characters out of 6146796
  398030 words of memory out of 5000000
- 23555 multiletter control sequences out of 15000+600000
+ 23565 multiletter control sequences out of 15000+600000
  7630 words of font info for 56 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,7n,77p,10449b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (4 pages).
+Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (6 pages).

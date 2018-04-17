@@ -168,6 +168,89 @@
 
 \section*{3. 嵌入式}
 
+嵌入式方法是继过滤式和包裹式后提出的特征选择方法，将特征选择嵌入到学习器的训练过程，通常该类算法计算复杂度比包裹式方法低，同时能获得不错的特征子集。
+要插入吗[????]
+嵌入式方法结合了前两种方法的优势，是十分流行的方法，前人基于已有的学习器模型提出了一些精致的方法。
+
+\subsection*{3.1 基于常用模型}
+
+lasso类(elastic net regularization)、SVM-RFE(Recursive Feature Elimination)、Regularized decision tree
+
+首先基于回归任务中基本的学习器模型——线性回归(linear regression)，[Tibshirani, 1996]提出了Lasso(least absolute shrinkage and selection operator)。
+Lasso通过在线性回归损失函数中添加$l_{1}-norm$正则化项，降低模型过拟合风险（$l_{2}-norm$的岭回归就是被提出来降低过拟合风险）的同时得到的稀疏权值向量可以作为特征选择的依据。
+下面给出Lasso的形式化定义：
+$$ min \sum_{i}(y_{i}-\textbf{w}^{T}\textbf{x}_{i})+\lambda \parallel \textbf{w} \parallel _{1} $$
+参数$\lambda>0$，该值越大对$\textbf{w}$的稀疏性约束越强，可以通过交叉验证的方式选取适当的值；算法收敛下得到的权值向量$\textbf{w}$一般是稀疏的，
+即$\textbf{w}$的各个分量$w_{i}$大部分为接近零的值，而$w_{i}$对应的意义是特征$X_{i}$在线性模型中的权重，自然地零值或接近零值对应的特征可以被舍弃，
+这样在线性模型训练完成的同时也完成了特征选择过程。实际上，上述给出的是basic lasso方法，后续在实践中遇到一些应用问题，做了一些改进和推广。
+记样本数量为$M$，特征维度为$N$，当应用场景中$N>M$或$N>>M$时，basic lasso选出的特征数量不会超过$M$，这容易导致有用特征信息的丢失；
+[2005,Zou and Hastie]提出elastic net的正则化，同时使用了$l_{1}-norm$和$l_{12}-norm$进行正则化：
+$$ min \sum_{i}(y_{i}-\textbf{w}^{T}\textbf{x}_{i})+\lambda_{1} \parallel \textbf{w} \parallel _{1} +\lambda_{2} \parallel \textbf{w} \parallel _{2} $$
+实际上基于elastic net正则化的lasso在$l_{1}-norm$约束的稀疏性和$l_{2}-norm$约束对特征间强相关问题的处理取得了不错的平衡。
+
+另外应对诸如基因序列分析这类问题，背景约束一组特征必须被选进最优特征子集。[2006,Yuan and Lin]提出了Group lasso，把约束的特征组对应的权值作为
+新的正则化项[Model Selection and Estimation in Regression with Grouped Variables]。该方法满足特征组约束条件同时能很好的考虑多个特征
+对任务的组合影响，在组合影响成为主导因素的场景中有很好的应用。
+
+
+对于分类任务，我们介绍基于十分流行的支持向量机(SVM)模型的嵌入式特征选择方法——SVM-RFE(Recursive Feature Elimination)。首先给出经典的
+支持向量机的公式定义：
+$$ min \frac{1}{2}\parallel \textbf{w} \parallel^{2} $$
+$$ s.t. y_{i}(\textbf{w}^{T}\textbf{x}_{i}+b)>=1 $$
+SVM-RFE是循环删除特征的过程，每一轮用当前未被删除的特征训练学习器SVM，并得到特征$X_{i}$的权值$w_{i}$,然后每个特征按照得分$C_{i}=w_{i}^{2}$
+进行排序，在该轮训练中删除得分最小的特征。用该算法进行特征选择时，可以制定最后保留的特征子集的大小。SVM-RFE最早提出来被应用到医学癌症分析领域，取得了不错的
+分析效果，究其原因是SVM良好的分类性能，也从侧面说明了嵌入式特征选择的性能很大程度上依赖于学习器模型。
+[Guyon, Gene Selection for Cancer Classification using Support Vector Machines]
+
+
+延续上述思路，我们介绍基于决策树或判定树(Decision Tree)的嵌入式特征选择方法——Regularized Trees。该方法的思想是在单棵决策树的构造过程中
+加入正则化项，目的是尽量减少划分中设计的特征的种类数；因为划分中用到的特征可以认为是重要的特征，那么在划分过程中尽量使用之前的划分过程中用到的
+特征，那么最后决策树构造完成时划分用到的所有特征种类数是相对少的。Regularized Trees的做法是惩罚性地对于当前划分中可能用到的全新的
+特征种类计算得到的信息增益乘上一个小于1的系数，下面是具体算法：
+
+\begin{algorithm}
+  \caption{Wrapper Algorithm}
+  \begin{algorithmic}
+    \REQUIRE $ D(F_{0}, F_{1},..., F_{N-1})$
+
+             $ S_{0}$
+    \ENSURE $ S_{best} $
+
+  \end{algorithmic}
+
+
+
+
+\end{algorithm}
+Regularized Trees在全体数据集中随机采样部分数据构造单棵决策树，类似于esemble的方法：
+\begin{algorithm}
+  \caption{Wrapper Algorithm}
+  \begin{algorithmic}
+    \REQUIRE $ D(F_{0}, F_{1},..., F_{N-1})$
+
+             $ S_{0}$
+    \ENSURE $ S_{best} $
+
+  \end{algorithmic}
+
+
+
+
+\end{algorithm}
+
+决策树对连续值一般做离散化处理。得益于决策树模型的优势，Regularized Trees是个不错的特征选择方法，劣势是计算量比SVM和Lasso类的方法大很多。
+[Feature Selection via Regularized Trees]
+
+
+
+\subsection*{3.2 理论模型分析}
+
+本文以上介绍了不同需求下的一些特征选择方法，可以说特征选择领域的方法繁多，虽说以候选特征子集的评价分为了三大类，但面对一些具体问题，有时候我们还是很难
+选择合适的方法。下面我们提出关于特征选择理论模型分析，并分不同的情况进行讨论。
+
+
+\subsection*{3.2 深度学习模型}
+
 
 
 
