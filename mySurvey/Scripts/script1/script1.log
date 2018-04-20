@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  11 APR 2018 22:14
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.19)  20 APR 2018 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **script1.tex
-(/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.tex
+(/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -1096,7 +1096,7 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count143
 \ALC@tlm=\skip59
 \algorithmicindent=\skip60
-) (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux)
+) (/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux)
 \openout1 = `script1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -1248,29 +1248,29 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.53937> on input line 61.
+(Font)              <10.53937> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 61.
+(Font)              <7> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 61.
+(Font)              <5> on input line 69.
 
-Overfull \hbox (32.13173pt too wide) in paragraph at lines 60--64
+Overfull \hbox (32.13173pt too wide) in paragraph at lines 68--74
 []\EU1/FandolSong-Regular(0)/m/n/10.53937 特 征 选 择 的 形 式 化 定 义：| 首 先 将 样 本 空 间 定 义 为 一 个 $\OML/cmm/m/it/10.53937 N$ \EU1/FandolSong-Regular(0)/m/n/10.53937 维 的 随 机 变 量 $\OML/cmm/m/it/10.53937 X \OT1/cmr/m/n/10.53937 = (\OML/cmm/m/it/10.53937 X[]; X[]; :::; X[]\OT1/cmr/m/n/10.53937 )$\EU1/FandolSong-Regular(0)/m/n/10.53937 ，|
  []
 
 [2]
-Overfull \hbox (41.5297pt too wide) in paragraph at lines 112--117
+Overfull \hbox (41.5297pt too wide) in paragraph at lines 129--136
 \EU1/FandolSong-Regular(0)/m/n/10.53937 其 中 $\OML/cmm/m/it/10.53937 IG\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 )$ \EU1/FandolSong-Regular(0)/m/n/10.53937 为 信 息 增 益，|  对 于 $\OML/cmm/m/it/10.53937 A; B$ \EU1/FandolSong-Regular(0)/m/n/10.53937 是 对 称 的；| $\OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) = \OMS/cmsy/m/n/10.53937 ^^@ [][] \OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 log[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 ))$
  []
 
-[3] [4] [5] [6] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
+[3] [4] [5] [6] (/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
 Here is how much of TeX's memory you used:
  20355 strings out of 493638
- 418265 string characters out of 6146796
- 398030 words of memory out of 5000000
+ 418373 string characters out of 6146796
+ 398032 words of memory out of 5000000
  23565 multiletter control sequences out of 15000+600000
  7630 words of font info for 56 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,7n,77p,10449b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (6 pages).
+Output written on /home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (6 pages).
