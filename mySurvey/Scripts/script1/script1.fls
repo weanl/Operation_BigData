@@ -154,4 +154,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/DFS.png
+INPUT /home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.bbl
+INPUT /home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.bbl
 INPUT /home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux

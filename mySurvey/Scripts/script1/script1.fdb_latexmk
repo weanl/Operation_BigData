@@ -1,8 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1524193713 "script1.tex" "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1524193715
-  "/dev/null" 1524146445 0 d41d8cd98f00b204e9800998ecf8427e ""
+["bibtex script1"] 1524492729 "script1.aux" "script1.bbl" "script1" 1524492732
+  "/usr/share/texlive/texmf-dist/bibtex/bib/spie/report.bib" 1177262081 1983 08bf055827e89f53953df54473251dea ""
+  "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+  "script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
+  "script1.bcf" 0 -1 0 ""
+  (generated)
+  "script1.bbl"
+["pdflatex"] 1524492729 "script1.tex" "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1524492732
+  "/dev/null" 1524393482 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1524150602 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1524193715 395 3f733f8634544f5b1f4dd39190ed2a53 ""
+  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -85,12 +92,14 @@
   "/usr/share/texmf/tex/latex/tipa/t3enc.def" 1414244106 26483 c461a68c34040cb0d96c43e86c012a6d ""
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1524150779 3473323 b12d298c47aca03429c7b422194a5867 ""
-  "script1.aux" 1524193715 395 3f733f8634544f5b1f4dd39190ed2a53 ""
-  "script1.tex" 1524193665 17201 7f3b97cbf4d3dcc710f34b5f9c9653c3 ""
+  "DFS.png" 1524490693 126674 56b35486ea4cd8525fd924c32f14fb25 ""
+  "script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
+  "script1.bbl" 1524492729 49 0eba253fc001332e731e8aba3f23127b "bibtex script1"
+  "script1.tex" 1524492721 23196 d50278fa43d5c5fc4e8d7cadf9e1088d ""
   (generated)
-  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
   "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
-  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
+  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
+  "script1.aux"
   "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
   "script1.log"
-  "script1.aux"
+  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
