@@ -2,6 +2,7 @@
 \usepackage{ctex}
 \usepackage[margin=1.25in]{geometry}
 
+\usepackage{cite}
 
 \usepackage{url}
 \usepackage{enumerate}
@@ -13,6 +14,9 @@
 
 
 \begin{document}
+
+\bibliographystyle{plain}
+
 \title{综述. 特征选择方法}
 \author{MF1733062 万晨 \url{weanl_jc@163.com}}
 \maketitle
@@ -22,7 +26,7 @@
   特征选择(Feature, Variable and Attribution Selection)，是机器学习中feature construction的重要组成部分。
   在筛选原始数据，构造有用的特征集合方面，特征选择不同于特征提取(Feature Extraction)：后者会通过线性或非线性的方式
   从原始数据中构造出全新的特征，具有特征学习和表示学习的能力
-  ["Representation Learning: A Review and New Perspectives"]；
+  ["Representation Learning: A Review and New Perspectives"]\cite{DBLP:journals/pami/BengioCV13}；
   特征选择通过设计一些简单高效或者精致巧妙的方法，实现从原始特征集合中选出最优的特征子集，能够保持特征对应的原始物理意义。
   所谓最优特征子集，理论上定义为没有信息丢失的最小特征子集，以Markov blanket的形式给出
   [D. Koller, Toward optimal feature selection]
@@ -405,8 +409,8 @@ learning，其中包括了从原始数据到学习器利用的数据之间的数
 
 
 
-\bibliographystyle{plain}
-\bibliography{report}
+
+\bibliography{script1Refs}
 
 
 
