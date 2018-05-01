@@ -1,13 +1,14 @@
 # Fdb version 3
-["bibtex script1"] 1524492729 "script1.aux" "script1.bbl" "script1" 1524492732
+["bibtex script1"] 1524492729 "script1.aux" "script1.bbl" "script1" 1525057563
   "/usr/share/texlive/texmf-dist/bibtex/bib/spie/report.bib" 1177262081 1983 08bf055827e89f53953df54473251dea ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
   "script1.bcf" 0 -1 0 ""
   (generated)
+  "script1.blg"
   "script1.bbl"
-["pdflatex"] 1524492729 "script1.tex" "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1524492732
-  "/dev/null" 1524393482 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1524492729 "script1.tex" "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1525057563
+  "/dev/null" 1525082024 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1524150602 1101 af7716885e081ab43982cab7b4672c1a ""
   "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -95,11 +96,11 @@
   "DFS.png" 1524490693 126674 56b35486ea4cd8525fd924c32f14fb25 ""
   "script1.aux" 1524492731 618 eef3419ec667afa927802a627fd68f14 ""
   "script1.bbl" 1524492729 49 0eba253fc001332e731e8aba3f23127b "bibtex script1"
-  "script1.tex" 1524492721 23196 d50278fa43d5c5fc4e8d7cadf9e1088d ""
+  "script1.tex" 1524493039 23196 d50278fa43d5c5fc4e8d7cadf9e1088d ""
   (generated)
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
-  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
-  "script1.aux"
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
   "script1.log"
+  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
   "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
+  "script1.aux"
