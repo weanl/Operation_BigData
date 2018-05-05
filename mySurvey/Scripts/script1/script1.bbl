@@ -1,9 +1,82 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{DBLP:journals/jmlr/AliferisSTMK10}
+Constantin~F. Aliferis, Alexander~R. Statnikov, Ioannis Tsamardinos, Subramani
+  Mani, and Xenofon~D. Koutsoukos.
+\newblock Local causal and markov blanket induction for causal discovery and
+  feature selection for classification part {I:} algorithms and empirical
+  evaluation.
+\newblock {\em Journal of Machine Learning Research}, 11:171--234, 2010.
+
+\bibitem{DBLP:journals/jmlr/AliferisSTMK10a}
+Constantin~F. Aliferis, Alexander~R. Statnikov, Ioannis Tsamardinos, Subramani
+  Mani, and Xenofon~D. Koutsoukos.
+\newblock Local causal and markov blanket induction for causal discovery and
+  feature selection for classification part {II:} analysis and extensions.
+\newblock {\em Journal of Machine Learning Research}, 11:235--284, 2010.
 
 \bibitem{DBLP:journals/pami/BengioCV13}
 Yoshua Bengio, Aaron~C. Courville, and Pascal Vincent.
 \newblock Representation learning: {A} review and new perspectives.
 \newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 35(8):1798--1828,
   2013.
+
+\bibitem{DBLP:conf/ijcnn/DengR12}
+Houtao Deng and George~C. Runger.
+\newblock Feature selection via regularized trees.
+\newblock In {\em The 2012 International Joint Conference on Neural Networks
+  (IJCNN), Brisbane, Australia, June 10-15, 2012}, pages 1--8, 2012.
+
+\bibitem{DBLP:journals/ml/GuyonWBV02}
+Isabelle Guyon, Jason Weston, Stephen Barnhill, and Vladimir Vapnik.
+\newblock Gene selection for cancer classification using support vector
+  machines.
+\newblock {\em Machine Learning}, 46(1-3):389--422, 2002.
+
+\bibitem{DBLP:conf/icml/KollerS96}
+Daphne Koller and Mehran Sahami.
+\newblock Toward optimal feature selection.
+\newblock In {\em Machine Learning, Proceedings of the Thirteenth International
+  Conference {(ICML} '96), Bari, Italy, July 3-6, 1996}, pages 284--292, 1996.
+
+\bibitem{Theano/DFS/package}
+Ngom~A. Li, Y.
+\newblock Deep learning package.
+\newblock \url{https://github.com/yifeng-li/deep}.
+
+\bibitem{DBLP:conf/recomb/LiCW15}
+Yifeng Li, Chih{-}Yu Chen, and Wyeth~W. Wasserman.
+\newblock Deep feature selection: Theory and application to identify enhancers
+  and promoters.
+\newblock In {\em Research in Computational Molecular Biology - 19th Annual
+  International Conference, {RECOMB} 2015, Warsaw, Poland, April 12-15, 2015,
+  Proceedings}, pages 205--217, 2015.
+
+\bibitem{DBLP:journals/tkde/LiuY05}
+Huan Liu and Lei Yu.
+\newblock Toward integrating feature selection algorithms for classification
+  and clustering.
+\newblock {\em {IEEE} Trans. Knowl. Data Eng.}, 17(4):491--502, 2005.
+
+\bibitem{DBLP:journals/mldm/MaresWG16}
+Mihaela~A. Mares, Shicai Wang, and Yike Guo.
+\newblock Combining multiple feature selection methods and deep learning for
+  high-dimensional data.
+\newblock {\em Trans. {MLDM}}, 9(1):27--45, 2016.
+
+\bibitem{DBLP:conf/icml/XingJK01}
+Eric~P. Xing, Michael~I. Jordan, and Richard~M. Karp.
+\newblock Feature selection for high-dimensional genomic microarray data.
+\newblock In {\em Proceedings of the Eighteenth International Conference on
+  Machine Learning {(ICML} 2001), Williams College, Williamstown, MA, USA, June
+  28 - July 1, 2001}, pages 601--608, 2001.
+
+\bibitem{DBLP:conf/icml/YuL03}
+Lei Yu and Huan Liu.
+\newblock Feature selection for high-dimensional data: {A} fast
+  correlation-based filter solution.
+\newblock In {\em Machine Learning, Proceedings of the Twentieth International
+  Conference {(ICML} 2003), August 21-24, 2003, Washington, DC, {USA}}, pages
+  856--863, 2003.
 
 \end{thebibliography}

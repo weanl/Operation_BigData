@@ -22,24 +22,27 @@
 \maketitle
 
 \section*{1. 介绍}
-  FS在ML中能解决那些问题？已经解决得怎么样了？还有那些问题？feature construction = FS + FE
+  %FS在ML中能解决那些问题？已经解决得怎么样了？还有那些问题？feature construction = FS + FE
   特征选择(Feature, Variable and Attribution Selection)，是机器学习中feature construction的重要组成部分。
   在筛选原始数据，构造有用的特征集合方面，特征选择不同于特征提取(Feature Extraction)：后者会通过线性或非线性的方式
   从原始数据中构造出全新的特征，具有特征学习和表示学习的能力
-  ["Representation Learning: A Review and New Perspectives"]\cite{DBLP:journals/pami/BengioCV13}；
+  \cite{DBLP:journals/pami/BengioCV13}；
   特征选择通过设计一些简单高效或者精致巧妙的方法，实现从原始特征集合中选出最优的特征子集，能够保持特征对应的原始物理意义。
   所谓最优特征子集，理论上定义为没有信息丢失的最小特征子集，以Markov blanket的形式给出
-  [D. Koller, Toward optimal feature selection]
-  [C.Aliferis, Local causal and markov blanket induction for causal discovery and feature selection]；
+  \cite{DBLP:conf/icml/KollerS96}
+  \cite{DBLP:journals/jmlr/AliferisSTMK10}
+  \cite{DBLP:journals/jmlr/AliferisSTMK10a}，
   实际中理论的ground-truth很难找，所以经验上一般我们用预测器性能（如分类器的精度）来评估特征子集的选择结果。
   特征选择一直以来是一个重要的课题：为了分析特征间相关性，早期[Blum and langley,1997,Kohavi and John,1997]等
   在1997年提出了特征选择方面课题研究，当时大多数应用领域下特征维数还不超过40。后续基因序列分析和web文本分类等典型应用
-  不断推动特征选择课题研究：[2001, Feature selection for high-dimensional genomic microarray data]
+  不断推动特征选择课题研究：
+  \cite{DBLP:conf/icml/XingJK01}
   针对高维的染色体序列数据提出了给予特征选择的基因分析方法，
-  [2015, Deep Feature Selection: Theory and Application to Identify Enhancer and Promoters]将深层神经网络
-  应用到特征选择中，实现了基因Enhancer和Promoter的有效分析。目前特征选择研究有两大趋势：
+  \cite{DBLP:conf/recomb/LiCW15}
+  将深层神经网络应用到特征选择中，实现了基因Enhancer和Promoter的有效分析。目前特征选择研究有两大趋势：
   第一，应对各种结构化和非结构化的数据设计出一套较为通用的方法，决策树类和深层神经网络类在特征选择方面的改进是不错的解决方法，
-  [Feature Selection via Regularized Trees]就是通过修改单棵树的构造算法实现基于随机森林的Ensemble类的特征选择方法；
+  \cite{DBLP:conf/ijcnn/DengR12}
+  就是通过修改单棵树的构造算法实现基于随机森林的Ensemble类的特征选择方法；
   第二，应对curse of dimensionality，设计复杂度较低的算法，有效地处理高维数据，改进现有的算法以及组合使用一些简单的算法
   都是很好的思路。
 
@@ -62,20 +65,14 @@
   section 3介绍最近流行的深度学习在特征选择方面的应用以及特征选择针对时序分析方面的方法；
   section 4介绍我们尝试设计的方法以及在数据集上的评价。
 
-  过滤式：（线性相关系数、互信息系数、relief and relief-F、combination）
-
-  包裹式：（一般子集搜索策略）
-
-
-
-
 
 \section*{2. 过滤式、包裹式与嵌入式}
   特征选择的形式化定义：
-  首先将样本空间定义为一个$ N $维的随机变量$ X = (X_{0}, X_{1}, ... , X_{N-1})$，
+  首先将样本空间定义为一个$ N $维的随机变量：
+  $$X = (X_{0}, X_{1}, ... , X_{N-1})$$
   其服从一定的概率分布，通常认为样本实例（数据）都是该概率分布采样所得；
-  特征全集$ S = \{X_{0}, X_{1}, ... , X_{N-1}\} $，特征选择考虑的是如何有效地除去无关和冗余的特征，
-  筛选得到”最优”特征子集$ S^{*} \subset S $[?]。
+  特征全集$S = \{X_{0}, X_{1}, ... , X_{N-1} \}$，特征选择考虑的是如何有效地除去无关和冗余的特征，
+  筛选得到”最优”特征子集$S^{*} \subset S$。
   显然，暴力地遍历$ S $所有子集会遇到组合爆炸，是不可行的。实际设计中，常采用如下思路进行搜索：
 
   \begin{itemize}
@@ -93,7 +90,9 @@
 
 
 \subsection*{2.1 过滤式方法}
-  算法的统一形式（见Algorithm 1）,  算法中$ eval(S_{0}, D, M)$说明过滤式采用独立的评价方法，下面介绍几种常见的方法。
+  算法的统一形式（见Algorithm 1）
+  \cite{DBLP:journals/tkde/LiuY05}
+  ,  算法中$ eval(S_{0}, D, M)$说明过滤式采用独立的评价方法，下面介绍几种常见的方法。
 
   \begin{algorithm}
     \caption{过滤式算法}
@@ -120,7 +119,7 @@
 
 
 \subsubsection*{2.1.1 基于pair-wise的度量}
-  线性相关系数、信息熵方法及MIC、relief-F
+  %线性相关系数、信息熵方法及MIC、relief-F
 
   在统计学中，常用线性相关系数(Pearson correlation coefficient)衡量两个随机变量间线性相关性。
   若定义两个随机变量$ A, B $,则可有$M$个采样$ A: a_{0},...,a_{M-1}; B: b_{0},...,b_{M-1}$
@@ -139,9 +138,9 @@
   该类方法是pair-wise的，定义良好的度量关系是关键。
   在信息论中，基于信息熵的信息增益是常用的衡量两个随机变量可以互相预测(predict)性，对于随机变量$ A, B $，
   采用归一化的衡量指标symmetrical uncertainty[?]：
-  $$ SU(A, B) = 2 \frac{IG(A \mid B)}{H(A)+H(B)} $$
+  $$SU(A, B) = 2 \frac{IG(A \mid B)}{H(A)+H(B)}$$
   其中$IG(A \mid B)=H(A)-H(A \mid B)$为信息增益，对于$A,B$是对称的；
-  $H(A)=-\sum_{i}P(a_{i})log_{2}(P(a_{i}))$为$A$的信息熵，$H(B)$计算类似；
+  $$H(A)=-\sum_{i}P(a_{i})log_{2}(P(a_{i}))$$为$A$的信息熵，$H(B)$计算类似；
   $H(A \mid B)=-\sum_{j}P(b_{j})\sum_{i}P(a_{i} \mid b_{j})log_{2}(P(a_{i} \mid b_{j}))$为观测到$B$的条件下
   $A$的信息熵，可以证明对于$A,B$是对称的。
   这种归一化的信息增益方法，克服了线性相关系数的较为苛刻的前提假设：不需进行正太分布检验，能很好地度量变量间的非线性关系，
@@ -159,27 +158,22 @@
 
 \subsubsection*{2.1.2 组合方法}
 
-[2003, Feature Selection for High-Dimensional Data: A Fast Correlation-Based Filter Solution]
-对于分类任务的特征选择提出了基于纯过滤式方法的FCBC Algorithm，经过精心的设计可以很好地解决特征冗余的问题。
+对于分类任务的特征选择人们提出了基于纯过滤式方法的FCBC Algorithm，经过精心的设计可以很好地解决特征冗余的问题。
 算法采用的是(2.1.1)中归一化的信息增益$SU(A,B)$作为相关关系度量，对应记作$SU_{A,B}$；
 定义了主导特征(Predominant Feature)。
 记特征全集$S$,候选特征子集$S^{*}$，在考虑把特征$F_{i}$加入$S^{*}$时，$F_{i}$必须为主导特征；
 所谓主导特征，首先满足$SU_{i,C} > \delta$，如果还满足在$S^{*}$中不存在$F_{j}$
 使得$SU_{j,i}>SU_{i,C}$，那么$F_{i}$是主导特征，
 如果不满足第二个条件可以用存在的特征$F_{j}$构建redundant peer集合$S_{P_{i}}$，
-然后依据算法缩减该集合，如果能缩减为空集，$F_{i}$也是主导特征。具体算法见[?]。
+然后依据算法缩减该集合，如果能缩减为空集，$F_{i}$也是主导特征。具体算法见\cite{DBLP:conf/icml/YuL03}。
 
 如果样本的数量规模为$N$,特征规模为$M$，FCBC算法的时间复杂度为$O(MNlogN)$，是比较快速的特征选择算法，
 能很好的应用到大量的高维数据。文章用有上千维特征数据的分类任务作为算法的评估，经验说明该精心设计的算法能取得不错的精度。
 
 
-
-
-
-
 \subsection*{2.2 包裹式方法}
-算法的统一形式（见Algorithm 1):
-
+算法的统一形式（见Algorithm 2)
+\cite{DBLP:journals/tkde/LiuY05}：
 \begin{algorithm}
   \caption{包裹式算法}
   \begin{algorithmic}[1]
@@ -217,12 +211,11 @@
 
 嵌入式方法是继过滤式和包裹式后提出的特征选择方法，将特征选择嵌入到学习器的训练过程，通常该类算法计算复杂度比包裹式方法低，
 同时能获得不错的特征子集。
-要插入吗[????]
+% 要插入吗[????]
 嵌入式方法结合了前两种方法的优势，是十分流行的方法，前人基于已有的学习器模型提出了一些精致的方法。
 
 \subsubsection*{2.3.1 基于常用模型}
-
-lasso类(elastic net regularization)、SVM-RFE(Recursive Feature Elimination)、Regularized decision tree
+%lasso类(elastic net regularization)、SVM-RFE(Recursive Feature Elimination)、Regularized decision tree
 
 首先基于回归任务中基本的学习器模型——线性回归(linear regression)，[Tibshirani, 1996]
 提出了Lasso(least absolute shrinkage and selection operator)。
@@ -244,12 +237,12 @@ $$ min \sum_{i}(y_{i}-\textbf{w}^{T}\textbf{x}_{i})+
 对特征间强相关问题的处理取得了不错的平衡。
 
 另外应对诸如基因序列分析这类问题，背景约束一组特征必须被选进最优特征子集。
-[2006,Yuan and Lin]提出了Group lasso，把约束的特征组对应的权值作为新的正则化项
-[Model Selection and Estimation in Regression with Grouped Variables]。
+[2006,Yuan and Lin]提出了Group lasso[??]，把约束的特征组对应的权值作为新的正则化项。
 该方法满足特征组约束条件同时能很好的考虑多个特征对任务的组合影响，在组合影响成为主导因素的场景中有很好的应用。
 
 
-对于分类任务，我们介绍基于十分流行的支持向量机(SVM)模型的嵌入式特征选择方法——SVM-RFE(Recursive Feature Elimination)。
+对于分类任务，我们介绍基于十分流行的支持向量机(SVM)模型的嵌入式特征选择方法——SVM-RFE(Recursive Feature Elimination)
+\cite{DBLP:journals/ml/GuyonWBV02}。
 首先给出经典的支持向量机的公式定义：
 $$ min \frac{1}{2}\parallel \textbf{w} \parallel^{2} $$
 $$ s.t. y_{i}(\textbf{w}^{T}\textbf{x}_{i}+b)>=1 $$
@@ -257,7 +250,6 @@ SVM-RFE是循环删除特征的过程，每一轮用当前未被删除的特征�
 然后每个特征按照得分$C_{i}=w_{i}^{2}$进行排序，在该轮训练中删除得分最小的特征。
 用该算法进行特征选择时，可以制定最后保留的特征子集的大小。SVM-RFE最早提出来被应用到医学癌症分析领域，取得了不错的
 分析效果，究其原因是SVM良好的分类性能，也从侧面说明了嵌入式特征选择的性能很大程度上依赖于学习器模型。
-[Guyon, Gene Selection for Cancer Classification using Support Vector Machines]
 
 
 延续上述思路，我们介绍基于决策树或判定树(Decision Tree)的嵌入式特征选择方法——Regularized Trees。
@@ -265,7 +257,7 @@ SVM-RFE是循环删除特征的过程，每一轮用当前未被删除的特征�
 因为划分中用到的特征可以认为是重要的特征，那么在划分过程中尽量使用之前的划分过程中用到的特征，
 那么最后决策树构造完成时划分用到的所有特征种类数是相对少的。
 Regularized Trees的做法是惩罚性地对于当前划分中可能用到的全新的特征种类计算得到的信息增益乘上一个小于1的系数，
-下面是具体算法：
+下面是具体算法\cite{DBLP:conf/ijcnn/DengR12}：
 
 \begin{algorithm}
   \caption{正则化决策树算法,递归调用$S=tree(data,S,\lambda)$}
@@ -326,7 +318,7 @@ Regularized Trees在全体数据集中随机采样部分数据构造单棵决策
 \end{algorithm}
 
 决策树对连续值一般做离散化处理。得益于决策树模型的优势，Regularized Trees是个不错的特征选择方法，
-劣势是计算量比SVM和Lasso类的方法大很多。[Feature Selection via Regularized Trees]
+劣势是计算量比SVM和Lasso类的方法大很多。
 
 
 \section*{3 深度模型}
@@ -337,8 +329,9 @@ Regularized Trees在全体数据集中随机采样部分数据构造单棵决策
 本文以上介绍了不同需求下的一些特征选择方法，可以说特征选择领域的方法繁多，虽说以候选特征子集的评价标准分为了三大类，
 但面对一些具体问题，有时候我们还是很难选择合适的方法。下面我们提出关于特征选择理论模型分析，给实际应用给出理论依据。
 
-section 1中说明的特征选择要尽量保证不会丢失信息，即理论上保留信息的完整性。[combining multiple feature Selection
-methods and deep learning for high-dimensional data]中贡献性地提出了基于学习器学习的目标模型类型选择
+section 1中说明的特征选择要尽量保证不会丢失信息，即理论上保留信息的完整性。
+\cite{DBLP:journals/mldm/MaresWG16}
+提出了基于学习器学习的目标模型类型选择
 合适的特征选择方法。所谓目标模型就是实际任务，可以表示为特征空间到标签值空间的映射函数：
 $$y_{i}=f(x_{i})=\beta_{0}+\beta x_{i}+\sum_{j}{\alpha_{j} g_{j}(x_{i}^{1},...,x_{i}^{p})}
 +\sum_{k}{\gamma_{k} h_{k}((x_{i}^{1},...,x_{i}^{p}))}+\varepsilon_{i}$$
@@ -363,7 +356,7 @@ learning，其中包括了从原始数据到学习器利用的数据之间的数
 的研究热点。不过由于网络自身结构，不会严格的保留变换前后特征的一一对应关系，所以目前feature learning方面绝大部分
 属于特征提取，如图像的卷积层提取、AutoEncoder和Sparse Coding等。
 
-[Deep Feature Selection:]用深层的神经网络做特征选择，设计的网络结构如下：
+\cite{DBLP:conf/recomb/LiCW15}用深层的神经网络做特征选择，设计的网络结构如下：
 
 \begin{figure}[!htbp]
   \centering
@@ -375,13 +368,12 @@ learning，其中包括了从原始数据到学习器利用的数据之间的数
 影响重要性，网络训练完成后$w$的零范数同来做特征选择，即只选取非零$w_{i}$对应的特征。
 
 该方法可以总结为DFS=DNN+FS，为了获得稀疏的$w=(w_{0},...,w_{N-1})$文章也构造了输出层带有正则化的损失函数，具体
-参考文献，另外作者也公开了在Theano上实现的代码供参考。\cite{wiki}
+参考文献，另外作者也公开了在Theano上实现的代码供参考\cite{Theano/DFS/package}。
 
 
 \subsection*{3.3 时序数据处理方法}
 
 未完待续。。。
-
 
 
 \section*{4 方法与评估}

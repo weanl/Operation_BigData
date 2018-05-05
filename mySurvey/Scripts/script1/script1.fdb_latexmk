@@ -1,15 +1,16 @@
 # Fdb version 3
-["bibtex script1"] 1525183383 "script1.aux" "script1.bbl" "script1" 1525183385
+["bibtex script1"] 1525226150 "script1.aux" "script1.bbl" "script1" 1525227259
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "script1.aux" 1525183385 707 bbf1ec515e09c153a3cf0b574c1d9b8a ""
+  "script1.aux" 1525227259 1643 4ce9db85ec0968a9bea7f45c91556bea ""
   "script1.bcf" 0 -1 0 ""
-  "script1Refs.bib" 1525183106 1158 71b0d50b6d524e16445c0e120d948b1f ""
+  "script1Refs.bib" 1525226118 7867 49609dcc1066bbf3df28c0910aec4194 ""
   (generated)
+  "script1.blg"
   "script1.bbl"
-["pdflatex"] 1525183383 "script1.tex" "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1525183385
+["pdflatex"] 1525227258 "script1.tex" "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf" "script1" 1525227259
   "/dev/null" 1524674042 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1521775747 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1525183385 707 bbf1ec515e09c153a3cf0b574c1d9b8a ""
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux" 1525227259 1643 4ce9db85ec0968a9bea7f45c91556bea ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -94,13 +95,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1521775802 3471778 067fc8e63ee8c16fc579758e7d014856 ""
   "DFS.png" 1525181592 126674 56b35486ea4cd8525fd924c32f14fb25 ""
-  "script1.aux" 1525183385 707 bbf1ec515e09c153a3cf0b574c1d9b8a ""
-  "script1.bbl" 1525183383 299 7f768143b860c3ad321fde8da2f9741a "bibtex script1"
-  "script1.tex" 1525183378 23264 0df5b2c5a0fd5f31faebc6f7d8f19536 ""
+  "script1.aux" 1525227259 1643 4ce9db85ec0968a9bea7f45c91556bea ""
+  "script1.bbl" 1525226150 3525 01f01eab6b8911ecf717cbbb9f6c9602 "bibtex script1"
+  "script1.tex" 1525227251 22765 cdc8928248e7613685830123daa5ea32 ""
   (generated)
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
-  "script1.log"
-  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
-  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
   "script1.aux"
+  "script1.log"
   "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"
+  "/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf"
+  "/home/wanchen/Documents/Git/Operation_BigData/mySurvey/Scripts/script1/script1.log"

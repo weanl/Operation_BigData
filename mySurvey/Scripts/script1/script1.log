@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  1 MAY 2018 22:03
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.23)  2 MAY 2018 10:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1252,39 +1252,21 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.53937> on input line 75.
+(Font)              <10.53937> on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 75.
+(Font)              <7> on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 75.
-
-Overfull \hbox (32.13173pt too wide) in paragraph at lines 74--80
-[]\EU1/FandolSong-Regular(0)/m/n/10.53937 特 征 选 择 的 形 式 化 定 义：| 首 先 将 样 本 空 间 定 义 为 一 个 $\OML/cmm/m/it/10.53937 N$ \EU1/FandolSong-Regular(0)/m/n/10.53937 维 的 随 机 变 量 $\OML/cmm/m/it/10.53937 X \OT1/cmr/m/n/10.53937 = (\OML/cmm/m/it/10.53937 X[]; X[]; :::; X[]\OT1/cmr/m/n/10.53937 )$\EU1/FandolSong-Regular(0)/m/n/10.53937 ，|
- []
-
-[2]
-Overfull \hbox (41.5297pt too wide) in paragraph at lines 142--149
-\EU1/FandolSong-Regular(0)/m/n/10.53937 其 中 $\OML/cmm/m/it/10.53937 IG\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A \OMS/cmsy/m/n/10.53937 j \OML/cmm/m/it/10.53937 B\OT1/cmr/m/n/10.53937 )$ \EU1/FandolSong-Regular(0)/m/n/10.53937 为 信 息 增 益，|  对 于 $\OML/cmm/m/it/10.53937 A; B$ \EU1/FandolSong-Regular(0)/m/n/10.53937 是 对 称 的；| $\OML/cmm/m/it/10.53937 H\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A\OT1/cmr/m/n/10.53937 ) = \OMS/cmsy/m/n/10.53937 ^^@ [][] \OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 log[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 P\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 a[]\OT1/cmr/m/n/10.53937 ))$
- []
-
-[3] [4] [5] [6] [7]
+(Font)              <5> on input line 71.
+ [2] [3] [4] [5] [6] [7]
 File: DFS.png Graphic file (type QTm)
- <use  "DFS.png" >
-
-LaTeX Warning: Citation `wiki' on page 8 undefined on input line 378.
-
-(/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.bbl [8]) [9] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ <use  "DFS.png" > (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.bbl [8]) [9] (/home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.aux) ) 
 Here is how much of TeX's memory you used:
- 20468 strings out of 493638
- 420385 string characters out of 6146796
- 408859 words of memory out of 5000000
- 23668 multiletter control sequences out of 15000+600000
+ 20467 strings out of 493638
+ 419939 string characters out of 6146796
+ 399886 words of memory out of 5000000
+ 23667 multiletter control sequences out of 15000+600000
  7638 words of font info for 57 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,9n,77p,10449b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,9n,77p,10449b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on /home/weanl/Git/Operation_BigData/mySurvey/Scripts/script1/script1.pdf (9 pages).

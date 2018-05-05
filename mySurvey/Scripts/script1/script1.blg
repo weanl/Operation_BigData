@@ -3,46 +3,64 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: script1.aux
 The style file: plain.bst
 Database file #1: script1Refs.bib
-Warning--I didn't find a database entry for "wiki"
-You've used 1 entry,
+A bad cross reference---entry "DBLP:conf/icml/KollerS96"
+refers to entry "DBLP:conf/icml/1996", which doesn't exist
+A bad cross reference---entry "DBLP:conf/icml/XingJK01"
+refers to entry "DBLP:conf/icml/2001", which doesn't exist
+A bad cross reference---entry "DBLP:conf/recomb/LiCW15"
+refers to entry "DBLP:conf/recomb/2015", which doesn't exist
+A bad cross reference---entry "DBLP:conf/ijcnn/DengR12"
+refers to entry "DBLP:conf/ijcnn/2012", which doesn't exist
+A bad cross reference---entry "DBLP:conf/icml/YuL03"
+refers to entry "DBLP:conf/icml/2003", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icml/1996"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2001"
+Warning--I didn't find a database entry for "DBLP:conf/recomb/2015"
+Warning--I didn't find a database entry for "DBLP:conf/ijcnn/2012"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2003"
+Too many commas in name 1 of "Li, Y., Ngom, A." for entry Theano/DFS/package
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Li, Y., Ngom, A." for entry Theano/DFS/package
+while executing---line 1090 of file plain.bst
+You've used 12 entries,
             2118 wiz_defined-function locations,
-            507 strings with 4229 characters,
-and the built_in function-call counts, 402 in all, are:
-= -- 39
-> -- 18
-< -- 0
-+ -- 7
-- -- 6
-* -- 35
-:= -- 72
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 6
+            593 strings with 7182 characters,
+and the built_in function-call counts, 4765 in all, are:
+= -- 478
+> -- 210
+< -- 5
++ -- 82
+- -- 70
+* -- 328
+:= -- 746
+add.period$ -- 36
+call.type$ -- 12
+change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 11
-empty$ -- 30
-format.name$ -- 6
-if$ -- 78
+cite$ -- 12
+duplicate$ -- 184
+empty$ -- 382
+format.name$ -- 70
+if$ -- 1022
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 4
+int.to.str$ -- 12
+missing$ -- 11
+newline$ -- 63
+num.names$ -- 24
+pop$ -- 78
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 59
 quote$ -- 0
-skip$ -- 7
+skip$ -- 147
 stack$ -- 0
-substring$ -- 36
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 354
+swap$ -- 58
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 48
 warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 13
-(There was 1 warning)
+while$ -- 51
+width$ -- 14
+write$ -- 132
+(There were 7 error messages)
