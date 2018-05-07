@@ -13,54 +13,60 @@ A bad cross reference---entry "DBLP:conf/ijcnn/DengR12"
 refers to entry "DBLP:conf/ijcnn/2012", which doesn't exist
 A bad cross reference---entry "DBLP:conf/icml/YuL03"
 refers to entry "DBLP:conf/icml/2003", which doesn't exist
+A bad cross reference---entry "DBLP:conf/nips/RanzatoPCL06"
+refers to entry "DBLP:conf/nips/2006", which doesn't exist
+A bad cross reference---entry "DBLP:conf/aaai/FengZ18a"
+refers to entry "DBLP:conf/aaai/2018", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/icml/1996"
 Warning--I didn't find a database entry for "DBLP:conf/icml/2001"
 Warning--I didn't find a database entry for "DBLP:conf/recomb/2015"
 Warning--I didn't find a database entry for "DBLP:conf/ijcnn/2012"
 Warning--I didn't find a database entry for "DBLP:conf/icml/2003"
+Warning--I didn't find a database entry for "DBLP:conf/nips/2006"
+Warning--I didn't find a database entry for "DBLP:conf/aaai/2018"
 Too many commas in name 1 of "Li, Y., Ngom, A." for entry Theano/DFS/package
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Li, Y., Ngom, A." for entry Theano/DFS/package
 while executing---line 1090 of file plain.bst
-You've used 12 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            593 strings with 7182 characters,
-and the built_in function-call counts, 4765 in all, are:
-= -- 478
-> -- 210
-< -- 5
-+ -- 82
-- -- 70
-* -- 328
-:= -- 746
-add.period$ -- 36
-call.type$ -- 12
-change.case$ -- 71
+            610 strings with 7898 characters,
+and the built_in function-call counts, 5588 in all, are:
+= -- 557
+> -- 246
+< -- 6
++ -- 96
+- -- 82
+* -- 376
+:= -- 867
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 184
-empty$ -- 382
-format.name$ -- 70
-if$ -- 1022
+cite$ -- 14
+duplicate$ -- 223
+empty$ -- 454
+format.name$ -- 82
+if$ -- 1207
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 11
-newline$ -- 63
-num.names$ -- 24
-pop$ -- 78
+int.to.str$ -- 14
+missing$ -- 13
+newline$ -- 73
+num.names$ -- 28
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 69
 quote$ -- 0
-skip$ -- 147
+skip$ -- 178
 stack$ -- 0
-substring$ -- 354
-swap$ -- 58
-text.length$ -- 5
+substring$ -- 404
+swap$ -- 73
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 56
 warning$ -- 0
-while$ -- 51
-width$ -- 14
-write$ -- 132
-(There were 7 error messages)
+while$ -- 58
+width$ -- 16
+write$ -- 153
+(There were 9 error messages)

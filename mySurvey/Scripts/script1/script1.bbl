@@ -27,6 +27,13 @@ Houtao Deng and George~C. Runger.
 \newblock In {\em The 2012 International Joint Conference on Neural Networks
   (IJCNN), Brisbane, Australia, June 10-15, 2012}, pages 1--8, 2012.
 
+\bibitem{DBLP:conf/aaai/FengZ18a}
+Ji~Feng and Zhi{-}Hua Zhou.
+\newblock Autoencoder by forest.
+\newblock In {\em Proceedings of the Thirty-Second {AAAI} Conference on
+  Artificial Intelligence, New Orleans, Louisiana, USA, February 2-7, 2018},
+  2018.
+
 \bibitem{DBLP:journals/ml/GuyonWBV02}
 Isabelle Guyon, Jason Weston, Stephen Barnhill, and Vladimir Vapnik.
 \newblock Gene selection for cancer classification using support vector
@@ -63,6 +70,15 @@ Mihaela~A. Mares, Shicai Wang, and Yike Guo.
 \newblock Combining multiple feature selection methods and deep learning for
   high-dimensional data.
 \newblock {\em Trans. {MLDM}}, 9(1):27--45, 2016.
+
+\bibitem{DBLP:conf/nips/RanzatoPCL06}
+Marc'Aurelio Ranzato, Christopher~S. Poultney, Sumit Chopra, and Yann LeCun.
+\newblock Efficient learning of sparse representations with an energy-based
+  model.
+\newblock In {\em Advances in Neural Information Processing Systems 19,
+  Proceedings of the Twentieth Annual Conference on Neural Information
+  Processing Systems, Vancouver, British Columbia, Canada, December 4-7, 2006},
+  pages 1137--1144, 2006.
 
 \bibitem{DBLP:conf/icml/XingJK01}
 Eric~P. Xing, Michael~I. Jordan, and Richard~M. Karp.
