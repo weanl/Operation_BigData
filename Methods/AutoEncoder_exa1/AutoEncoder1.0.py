@@ -72,7 +72,7 @@ for i in range(N_TEST_IMG):
 computation and training
 '''
 
-sess = tf.Session()
+it
 sess.run(tf.global_variables_initializer())
 print('start the training')
 for step in range(8000):

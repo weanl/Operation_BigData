@@ -20,10 +20,10 @@ def runRegression(X_train, X_test, y_train, y_test, method='LR'):
     if method == 'BRR':
         regr = linear_model.BayesianRidge()
     if method == 'DTR':
-        regr = tree.DecisionTreeRegressor(max_depth=6)
+        regr = tree.DecisionTreeRegressor(max_depth=8)
     if method == 'GBR':
         regr = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1,
-        max_depth=2, random_state=0, loss='ls')
+        max_depth=6, random_state=0, loss='ls')
     if method == 'MLPR':
         regr = MLPRegressor(hidden_layer_sizes=(41,), batch_size=2048, max_iter=2000000, learning_rate_init=0.001)
 
@@ -73,7 +73,7 @@ def all_run():
 
 if __name__ == '__main__':
 
-    X, y = LoadData(target='PerfScore')
+    X, y = LoadData(target='LoadScore')
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
     runRegression(X_train, X_test, y_train, y_test, method='LR')
